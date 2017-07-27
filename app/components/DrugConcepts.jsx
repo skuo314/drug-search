@@ -16,7 +16,8 @@ export default class DrugConcepts extends Component {
     if (drugConceptsArray) {
       return drugConceptsArray.map((drug, idx) => {
         return (
-          <DrugConceptsList 
+          <DrugConceptsList
+            onSelect={this.props.onSelect} 
             key={idx}
             drug={drug} />
         );

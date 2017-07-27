@@ -1,1 +1,2 @@
 export const FETCH_DRUGS = 'FETCH_DRUGS';
+export const SEARCH_ALT_DRUGS = 'SEARCH_ALT_DRUGS';
