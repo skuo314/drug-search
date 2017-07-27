@@ -1,12 +1,36 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const DrugConcepts = props => {
+import DrugConceptsList from './DrugConceptsList';
 
-  return (
-    <ul className='col-md-6'>
-      <h3 className='drug-headers'>Concepts</h3>
-    </ul>
-  );
+export default class DrugConcepts extends Component {
+  constructor(props) {
+    super(props);
+
+    this.showDrugConcepts = this.showDrugConcepts.bind(this);
+  }
+
+  showDrugConcepts() {
+    const { drugConcepts } = this.props;
+    const drugConceptsArray = drugConcepts();
+
+    if (drugConceptsArray) {
+      return drugConceptsArray.map((drug, idx) => {
+        return (
+          <DrugConceptsList 
+            key={idx}
+            drug={drug} />
+        );
+      });
+    };
+  };
+
+
+  render() {
+    return (
+      <ul className='col-md-6 header-styles'>
+        <h1 className='drug-header'>Concepts</h1>
+        {this.showDrugConcepts()}
+      </ul>
+    );  
+  };
 };
-
-export default DrugConcepts;
