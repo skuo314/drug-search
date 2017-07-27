@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import axios from 'axios';
 
+import { fetchDrugs } from '../redux/action-creators/drugsearch';
+
 class SearchBar extends Component {
 	constructor(props) {
 		super(props)
@@ -12,7 +14,6 @@ class SearchBar extends Component {
 
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
-		this.addToFavorites = this.addToFavorites.bind(this);
 	}
 
 	handleChange(evt) {
@@ -21,6 +22,10 @@ class SearchBar extends Component {
 	}
 
 	handleSubmit(evt) {
+    evt.preventDefault();
+
+    this.props.fetchDrugs(this.state.input)
+    this.setState({input: ''});
 	}
 
 	render() {
@@ -54,7 +59,9 @@ const mapState = state => {
 };
 
 const mapDispatch = dispatch => {
-  return {};
+  return {
+  	fetchDrugs: drug => dispatch(fetchDrugs(drug))
+  };
 };
 
 export default connect(mapState, mapDispatch)(SearchBar);

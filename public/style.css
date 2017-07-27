@@ -79,10 +79,19 @@ input:focus {
 
 /* --- Drug List --- */
 
-.drug-headers {
+.header-styles {
+}
+
+.drug-header {
   font-weight: lighter;
 }
 
+
+/* --- Drug Items --- */
+.drug-items {
+  text-align: center;
+  list-style-type: none;
+}
 
 /* --- Responsiveness --- */
 
