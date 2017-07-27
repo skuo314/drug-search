@@ -1,0 +1,225 @@
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+/* --- Sidebar --- */
+
+.sidebar-main {
+  width: 33.33%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #264d73;
+}
+
+.sidebar-header {
+  text-align: right;
+  margin: 2.5em 2.5em 0 0;
+}
+
+.sidebar-logo {
+	opacity: 1;
+}
+
+
+/* --- Main --- */
+
+.main-container {
+  width: 66.66%;
+  height: 100%;
+  float: right;
+  text-indent: 10em;
+}
+
+/* --- SearchBar --- */
+
+.searchbar-container {
+	height: 3em;
+}
+
+.searchbar-header {
+  font-weight: lighter;
+  text-align: center;
+  color: white;
+}
+
+.searchbar-form {
+  height: 75%;
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+.searchbar {
+	height: 100%;
+	width: 75%;
+	text-indent: 1.25em;
+	border: none;
+	z-index: 1;
+	font-size: 1.25em;
+	font-weight: lighter;
+}
+
+.rounded {
+	border-radius: 25px;
+}
+
+.search-btn {
+  border: none;
+  background-color: #FFFFFF;
+  margin-left: -4em;
+}
+
+.magnify-img:hover {
+  transform: scale(1.25);
+}
+
+/* --- Drug List --- */
+
+.drug-headers {
+  font-weight: lighter;
+}
+
+
+/* --- Responsiveness --- */
+
+/* --- iPad Pro --- */
+@media only screen and (max-width: 1024px) and (max-height: 1366px) {
+    .sidebar-main {
+      width: 33%;
+      background-size: cover;
+      background-position: 65%;
+    }
+    .sidebar-header {
+      margin: 0.5em 0 0.5em 0;
+      display: block;
+      text-align: center;
+      height: 2.5em;
+    }
+    .active-btn, .goto-btn {
+      font-size: 1.5em;
+    }
+    .main-container {
+      width: 66.66%;
+      height: 100%;
+      margin-top: 10em;
+      text-indent: 0;
+      text-align: center;
+    }
+    .searchbar-header {
+      margin: 0.5em 0 0.25em 0;
+      font-size: 3em;
+    }
+    .searchbar-form {
+      position: relative;
+      margin: 3em auto;
+      width: 100%;
+      text-align: center;
+    }
+    .searchbar {
+      width: 30em;
+    }
+    .info-header {
+      font-size: 1em;
+      font-weight: bold;
+    }
+}
+
+/* --- iPad --- */
+@media only screen and (max-width: 768px) and (max-height: 1024px) {
+  .main-container {
+    margin-top: 6em;
+  }
+  .searchbar-header {
+    margin: 0;
+  }
+  .searchbar-form {
+    margin: 2em auto;
+  }
+  .searchbar {
+    width: 20em;
+  }
+}
+
+/* --- Nexus 5X/6P & iPhone 6Plus --- */
+@media only screen and (max-width: 414px) and (max-height: 736px) {
+    .sidebar-main {
+      width: 100%;
+      display: inline-block;
+      background-size: cover;
+    }
+    .sidebar-btns {
+      height: auto;
+      margin-top: 0;
+      width: 100%;
+      display: inline;
+    }
+    .sidebar-logo {
+      height: 1em;
+    }
+    .active-btn, .goto-btn {
+      width: 50%;
+      padding-left: 0;
+      display: table-cell;
+      text-align: center;
+      display: inline-block;
+    }
+    .main-container {
+      margin-top: 5em;
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    .searchbar-container {
+      margin-top: 1.5em;
+    }
+    .searchbar-header {
+      font-size: 2em;
+      margin-bottom: 0.25em;
+    }
+    .searchbar-form {
+      margin: 0;
+    }
+    .searchbar {
+      width: 17em;
+    }
+    .info-body {
+      color: white;
+    }
+    .favs-header {
+      font-size: 3em;
+    }
+    .favs-list {
+      width: 80%;
+    }
+}
+
+/* --- iPhone 6 --- */
+@media only screen and (max-width: 375px) and (max-height: 667px) {
+  .searchbar-header {
+    margin-bottom: 0.5em;
+  }
+}
+
+/* --- Galaxy S5 --- */
+@media only screen and (max-width: 360px) and (max-height: 640px) {
+  .searchbar {
+    text-indent: 3.5em;
+  }
+}
+
+/* --- iPhone 5 --- */
+@media only screen and (max-width: 320px) and (max-height: 568px) {
+  .searchbar {
+    width: 15.75em;
+    text-indent: 2.75em;
+  }
+  .searchbar-form {
+    text-align: inherit;
+  }
+}
