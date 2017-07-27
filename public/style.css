@@ -91,6 +91,7 @@ input:focus {
 .drug-items {
   text-align: center;
   list-style-type: none;
+  cursor: pointer;
 }
 
 /* --- Responsiveness --- */
