@@ -36,6 +36,7 @@ body {
 
 .searchbar-container {
   height: 3em;
+  margin-top: 20px;
 }
 
 .searchbar-header {
@@ -78,24 +79,41 @@ input:focus {
 
 /* --- Drug List --- */
 
-.header-styles {
-}
-
 .drug-header {
+  text-indent: 0;
+  text-align: center;
   font-weight: lighter;
 }
 
 
 /* --- Drug Items --- */
+.header-styles > .drug-items {
+    opacity: 1.0;
+}
+
+.header-styles:hover > .drug-items:not(:hover) {
+    opacity: 0.5;
+}
+
 .list-group-item.drug-items {
   padding: 10px 0 10px 0;
+  margin: 10px 0 10px 0;
   text-align: center;
   list-style-type: none;
   cursor: pointer;
   text-indent: 0;
 }
 
+
 /* --- Responsiveness --- */
+
+@media (min-width: 414px) {
+  div.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
 
 /* --- iPad Pro --- */
 @media only screen and (max-width: 1024px) and (max-height: 1366px) {
