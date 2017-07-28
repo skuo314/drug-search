@@ -12,7 +12,10 @@ class SearchBar extends Component {
 	constructor(props) {
 		super(props)
 
-		this.state = { input: '' };
+		this.state = { 
+			input: '',
+			isValid: true 
+		};
 
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -33,15 +36,10 @@ class SearchBar extends Component {
     
     evt.preventDefault();
     fetchDrugs(this.state.input);
-    this.setState({ input: '' });
+    this.setState({ input: '' });	
 
-    if(getDrugs.length > 0) {
-      removeCurrentConcept();
-    };
-
-    if(getAlternatives.length > 0) {
-      removeAlternatives();
-    };
+    if(getDrugs.length > 0) removeCurrentConcept();
+    if(getAlternatives.length > 0) removeAlternatives();
 	};
 
 	render() {
@@ -62,6 +60,10 @@ class SearchBar extends Component {
           		src='../images/magnifying-glass.png'/>
           </button>
 		    </form>
+		    { !this.state.isValid 
+		    	? <div><h2>Please enter valid drug name</h2></div>
+		    	: null
+		    }
 		  </div>
 		);
 	}; 
