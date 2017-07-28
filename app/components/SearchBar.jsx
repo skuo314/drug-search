@@ -12,10 +12,7 @@ class SearchBar extends Component {
 	constructor(props) {
 		super(props)
 
-		this.state = { 
-			input: '',
-			isValid: true 
-		};
+		this.state = { input: '' };
 
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
