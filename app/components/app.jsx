@@ -6,18 +6,12 @@ import Sidebar from './Sidebar';
 export default class App extends Component {
 	constructor(props) {
 		super(props);
-
-		this.changeTab = this.changeTab.bind(this);
-	}
-
-	changeTab(path) {
-		browserHistory.push(path);
 	}
 
   render() {
     return (
 			<div>
-				<Sidebar changeTab={this.changeTab}/>
+				<Sidebar />
 				{this.props.children}
 			</div>
     );

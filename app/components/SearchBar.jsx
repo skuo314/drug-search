@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import axios from 'axios';
 
-import { fetchDrugs } from '../redux/action-creators/drugsearch';
+import { 
+	fetchDrugs, 
+	removeCurrentConcept,
+	removeAlternatives } from '../redux/action-creators/drugsearch';
+
+/* -----------------    COMPONENT     ------------------ */
 
 class SearchBar extends Component {
 	constructor(props) {
@@ -22,10 +27,24 @@ class SearchBar extends Component {
 	}
 
 	handleSubmit(evt) {
+		const { 
+			getDrugs, 
+			fetchDrugs, 
+			getAlternatives, 
+			removeCurrentConcept, 
+			removeAlternatives } = this.props;
+    
     evt.preventDefault();
-
-    this.props.fetchDrugs(this.state.input)
+    fetchDrugs(this.state.input);
     this.setState({input: ''});
+
+    if(getDrugs.length > 0) {
+      removeCurrentConcept();
+    };
+
+    if(getAlternatives.length > 0) {
+      removeAlternatives();
+    };
 	}
 
 	render() {
@@ -55,12 +74,17 @@ class SearchBar extends Component {
 /* -----------------    CONTAINER     ------------------ */
 
 const mapState = state => {
-  return {};
+  return {
+  	getDrugs: state.conceptsReducer,
+  	getAlternatives: state.alternativesReducer
+  };
 };
 
 const mapDispatch = dispatch => {
   return {
-  	fetchDrugs: drug => dispatch(fetchDrugs(drug))
+  	fetchDrugs: drug => dispatch(fetchDrugs(drug)),
+  	removeCurrentConcept: () => dispatch(removeCurrentConcept()),
+  	removeAlternatives: () => dispatch(removeAlternatives())
   };
 };
 
