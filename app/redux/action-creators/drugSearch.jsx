@@ -7,7 +7,6 @@ import { fetchConcept, searchDrugGroup, searchAlternativeDrugs } from '../utils/
 
 export const fetchDrugs = drug => {
 	const request = fetchConcept(drug);
-
 	return {
 		type: FETCH_DRUGS,
 		payload: request
@@ -17,20 +16,19 @@ export const fetchDrugs = drug => {
 export const removeCurrentConcept = () => {
 	return {
 		type: REMOVE_CURRENT_CONCEPT
-	}
-}
+	};
+};
 
 export const searchAlternatives = rxcui => {
 	const request = searchAlternativeDrugs(rxcui);
-
 	return {
 		type: SEARCH_ALT_DRUGS,
 		payload: request
-	}
-}
+	};
+};
 
 export const removeAlternatives = () => {
 	return {
 		type: REMOVE_ALTERNATIVES
-	}
-}
+	};
+};

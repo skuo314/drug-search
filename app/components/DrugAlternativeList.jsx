@@ -4,7 +4,7 @@ const DrugAlternativesList = ({ alternatives }) => {
 
   return (
     <li className='list-group-item drug-items'>
-      {alternatives.name}
+      { alternatives.name }
     </li>
   );
 };

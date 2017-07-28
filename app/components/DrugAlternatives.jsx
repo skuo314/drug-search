@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-
 import DrugAlternativeList from './DrugAlternativeList';
 
 export default class DrugAlternatives extends Component {
@@ -8,7 +7,7 @@ export default class DrugAlternatives extends Component {
     super(props);
 
     this.showAlternatives = this.showAlternatives.bind(this);
-  }
+  };
 
   showAlternatives() {
     const { alternatives } = this.props;
@@ -18,12 +17,12 @@ export default class DrugAlternatives extends Component {
       return alternativesArray.map((alternatives, idx) => {
         return (
           <DrugAlternativeList
-            key={idx}
-            alternatives={alternatives} />
+            key={ idx }
+            alternatives={ alternatives } />
         );
       });
     };
-  }
+  };
 
   render() {
 	  return (
@@ -32,5 +31,5 @@ export default class DrugAlternatives extends Component {
         { this.showAlternatives() }
 	    </ul>
 	  );	
-  }
+  };
 };

@@ -5,7 +5,7 @@ export const fetchConcept = drug => {
 	const request = axios.get(url)
 		.then(response => {
 			return response;
-		})
+		});
 		return request;
 };
 
@@ -14,7 +14,7 @@ export const searchDrugGroup = drug => {
 	const request = axios.get(url)
 		.then(response => {
 			return response;
-		})
+		});
 		return request;
 };
 
@@ -23,6 +23,6 @@ export const searchAlternativeDrugs = rxcui => {
 	const request = axios.get(url)
 		.then(response => {
 			return response;
-		})
+		});
 		return request;
 };

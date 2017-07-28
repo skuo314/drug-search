@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import DrugConceptsList from './DrugConceptsList';
 
 export default class DrugConcepts extends Component {
@@ -7,7 +6,7 @@ export default class DrugConcepts extends Component {
     super(props);
 
     this.showDrugConcepts = this.showDrugConcepts.bind(this);
-  }
+  };
 
   showDrugConcepts() {
     const { drugConcepts } = this.props;
@@ -17,9 +16,9 @@ export default class DrugConcepts extends Component {
       return drugConceptsArray.map((drug, idx) => {
         return (
           <DrugConceptsList
-            onSelect={this.props.onSelect} 
-            key={idx}
-            drug={drug} />
+            onSelect={ this.props.onSelect } 
+            key={ idx }
+            drug={ drug } />
         );
       });
     };
@@ -30,7 +29,7 @@ export default class DrugConcepts extends Component {
     return (
       <ul className='col-md-6 header-styles'>
         <h1 className='drug-header'>Concepts</h1>
-        {this.showDrugConcepts()}
+        { this.showDrugConcepts() }
       </ul>
     );  
   };
