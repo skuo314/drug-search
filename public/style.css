@@ -19,7 +19,7 @@ body {
 }
 
 .sidebar-logo {
-	opacity: 1;
+  opacity: 1;
 }
 
 
@@ -29,13 +29,13 @@ body {
   width: 66.66%;
   height: 100%;
   float: right;
-  text-indent: 10em;
+  text-indent: 7.5em;
 }
 
 /* --- SearchBar --- */
 
 .searchbar-container {
-	height: 3em;
+  height: 3em;
 }
 
 .searchbar-header {
@@ -54,23 +54,22 @@ input:focus {
 }
 
 .searchbar {
-	height: 100%;
-	width: 75%;
-	text-indent: 1.25em;
-	border: none;
-	z-index: 1;
-	font-size: 1.25em;
-	font-weight: lighter;
+  height: 100%;
+  width: 75%;
+  text-indent: 1.25em;
+  border: none;
+  z-index: 1;
+  font-weight: lighter;
 }
 
 .rounded {
-	border-radius: 25px;
+  border-radius: 25px;
 }
 
 .search-btn {
   border: none;
   background-color: #FFFFFF;
-  margin-left: -4em;
+  margin-left: -3em;
 }
 
 .magnify-img:hover {
@@ -88,10 +87,12 @@ input:focus {
 
 
 /* --- Drug Items --- */
-.drug-items {
+.list-group-item.drug-items {
+  padding: 10px 0 10px 0;
   text-align: center;
   list-style-type: none;
   cursor: pointer;
+  text-indent: 0;
 }
 
 /* --- Responsiveness --- */
@@ -115,7 +116,6 @@ input:focus {
     .main-container {
       width: 66.66%;
       height: 100%;
-      margin-top: 10em;
       text-indent: 0;
       text-align: center;
     }
@@ -129,9 +129,6 @@ input:focus {
       width: 100%;
       text-align: center;
     }
-    .searchbar {
-      width: 30em;
-    }
     .info-header {
       font-size: 1em;
       font-weight: bold;
@@ -140,17 +137,15 @@ input:focus {
 
 /* --- iPad --- */
 @media only screen and (max-width: 768px) and (max-height: 1024px) {
-  .main-container {
-    margin-top: 6em;
-  }
   .searchbar-header {
     margin: 0;
+    font-size: 2em;
+  }
+  .searchbar {
+    font-size: 0.75em;
   }
   .searchbar-form {
     margin: 2em auto;
-  }
-  .searchbar {
-    width: 20em;
   }
 }
 
@@ -189,7 +184,7 @@ input:focus {
       margin-top: 1.5em;
     }
     .searchbar-header {
-      font-size: 2em;
+      font-size: 3em;
       margin-bottom: 0.25em;
     }
     .searchbar-form {
@@ -206,6 +201,10 @@ input:focus {
     }
     .favs-list {
       width: 80%;
+    }
+    .drug-header {
+      color: white;
+      padding-top: 0.75em;
     }
 }
 
