@@ -1,8 +1,10 @@
-# Drug Search
+# Rx Search
 
 ## Instructions
 
-To start your own server:
+You can view the deployed website <a href="http://rxsearch-env.g9m3mjnrfa.us-west-2.elasticbeanstalk.com/" target="_blank">here</a>
+
+Or to start your own server:
 
 ```
 $ git clone https://github.com/skuo314/drug-search.git

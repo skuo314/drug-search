@@ -33,15 +33,10 @@ class SearchBar extends Component {
     
     evt.preventDefault();
     fetchDrugs(this.state.input);
-    this.setState({ input: '' });
+    this.setState({ input: '' });	
 
-    if(getDrugs.length > 0) {
-      removeCurrentConcept();
-    };
-
-    if(getAlternatives.length > 0) {
-      removeAlternatives();
-    };
+    if(getDrugs.length > 0) removeCurrentConcept();
+    if(getAlternatives.length > 0) removeAlternatives();
 	};
 
 	render() {
