@@ -45,11 +45,13 @@ class Main extends Component {
   render() {
     return (
       <div className='main-container'>
+        <div className='another-container'>
         <DrugConcepts
           drugConcepts={this.drugConcepts}
           onSelect={selectedDrug => this.similarDrugGroup(selectedDrug)} />
         <DrugAlternatives
           alternatives={this.getDrugAlternatives} />
+        </div>
       </div>
     );
   };
