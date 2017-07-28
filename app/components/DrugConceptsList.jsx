@@ -9,9 +9,9 @@ const DrugConceptsList = ({ drug, onSelect }) => {
 
   return (
     <li className='list-group-item drug-items'
-        id={drug.name}
-        onClick={evt => selectDrug(evt)} >
-      {drug.name}
+        id={ drug.name }
+        onClick={ evt => selectDrug(evt) } >
+      { drug.name }
     </li>
   );
 };

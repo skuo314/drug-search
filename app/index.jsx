@@ -9,7 +9,6 @@ import {
 	IndexRoute, 
 	browserHistory 
 } from 'react-router';
-
 import App from './components/App';
 import Main from './components/Main';
 

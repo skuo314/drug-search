@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import axios from 'axios';
-
 import { 
 	fetchDrugs, 
 	removeCurrentConcept,
@@ -13,18 +12,16 @@ class SearchBar extends Component {
 	constructor(props) {
 		super(props)
 
-		this.state = {
-			input: ''
-		};
+		this.state = { input: '' };
 
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
-	}
+	};
 
 	handleChange(evt) {
 		let input = evt.target.value.toLowerCase();
 		this.setState({ input });
-	}
+	};
 
 	handleSubmit(evt) {
 		const { 
@@ -36,7 +33,7 @@ class SearchBar extends Component {
     
     evt.preventDefault();
     fetchDrugs(this.state.input);
-    this.setState({input: ''});
+    this.setState({ input: '' });
 
     if(getDrugs.length > 0) {
       removeCurrentConcept();
@@ -45,7 +42,7 @@ class SearchBar extends Component {
     if(getAlternatives.length > 0) {
       removeAlternatives();
     };
-	}
+	};
 
 	render() {
 		return (
@@ -65,7 +62,6 @@ class SearchBar extends Component {
           		src='../images/magnifying-glass.png'/>
           </button>
 		    </form>
-		    <div></div>
 		  </div>
 		);
 	}; 
