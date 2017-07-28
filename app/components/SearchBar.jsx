@@ -57,10 +57,6 @@ class SearchBar extends Component {
           		src='../images/magnifying-glass.png'/>
           </button>
 		    </form>
-		    { !this.state.isValid 
-		    	? <div><h2>Please enter valid drug name</h2></div>
-		    	: null
-		    }
 		  </div>
 		);
 	}; 
