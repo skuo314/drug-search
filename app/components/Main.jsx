@@ -33,7 +33,7 @@ class Main extends Component {
       });
   };
 
-  getDrugAlternatives(rxcui) {
+  getDrugAlternatives() {
     const { getAlternatives } = this.props;
     if(getAlternatives.length > 0) {
       return getAlternatives[0].relatedGroup.conceptGroup[0].conceptProperties;
@@ -43,13 +43,11 @@ class Main extends Component {
   render() {
     return (
       <div className='main-container'>
-        <div className='another-container'>
         <DrugConcepts
           drugConcepts={this.drugConcepts}
           onSelect={selectedDrug => this.similarDrugGroup(selectedDrug)} />
         <DrugAlternatives
           alternatives={this.getDrugAlternatives} />
-        </div>
       </div>
     );
   };
